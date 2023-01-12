@@ -1,5 +1,11 @@
 import express from "express";
 import api from "./api/index.js";
+import pin from "./api/pin.js";
+import topLangs from "./api/top-langs.js";
+import wakatime from "./api/wakatime.js";
 const app = express();
-app.get("/", api);
+app.get("/api", api);
+app.get("/api/pin", pin);
+app.get("/api/top-langs", topLangs);
+app.get("/api/wakatime", wakatime);
 app.listen(3000);
